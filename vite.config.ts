@@ -8,4 +8,10 @@ export default defineConfig({
     react(),
     babel({ presets: [reactCompilerPreset()] })
   ],
+  server: {
+    port: 80,
+    host: true,         // Listens on all network interfaces
+    allowedHosts: true, // Prevents Vite from blocking *.trycloudflare.com
+    strictPort: true,
+  },
 })
